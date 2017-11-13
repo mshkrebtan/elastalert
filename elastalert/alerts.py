@@ -1010,8 +1010,6 @@ class SlackAlerter(Alerter):
         # https://api.slack.com/docs/formatting
         body = body.encode('UTF-8')
         body = body.replace('&', '&amp;')
-        body = body.replace('<', '&lt;')
-        body = body.replace('>', '&gt;')
         return body
 
     def get_aggregation_summary_text__maximum_width(self):
